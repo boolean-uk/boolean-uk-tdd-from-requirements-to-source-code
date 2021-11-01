@@ -17,6 +17,8 @@
         ))
 */
 
+const totalCost = require("../src/totalCost");
+
 describe("Total cost", () => {
   it("returns total cost of items if there are items in the basket", () => {
     // setup
