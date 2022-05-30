@@ -1,9 +1,10 @@
 # From Domain Model to Tests
 
-### Learning Objectives
+## Learning Objectives
+
 - Use a Domain Model to create tests
 
-### Intro
+## Intro
 
 ```
 As a user,
@@ -15,10 +16,11 @@ Here's a **domain model** based on the above **user story**
 
 | Methods | Inputs | Scenario | Outputs
 | ------ | ------ | ------ | -----
-| searchByCohortName(cohortList, cohortName) | cohortList(@String[]), cohortName(@String) | If cohort name is in array | true
+| cohortSearch(cohortList, cohortName) | cohortList(@String[]), cohortName(@String) | If cohort name is in array | true
 | | | If cohort name is not in array | false
 
 Your teacher will demonstrate creating tests based on this domain model, following the 3 stage process
+
 1. **Setup**
 2. **Execute**
 3. **Verify**
@@ -32,7 +34,7 @@ describe("Cohort Search", () => {
     // setup
     const cohortList = ["class 1", "class 2"]
     // execute
-    const result = cohortSearch.searchByCohortName(cohortList, "class 1")
+    const result = cohortSearch(cohortList, "class 1")
     // verify
     expect(result).toEqual(true)
   })
@@ -41,15 +43,14 @@ describe("Cohort Search", () => {
     // setup
     const cohortList = ["class 1", "class 2"]
     // execute
-    const result = cohortSearch.searchByCohortName(cohortList, "class 3")
+    const result = cohortSearch(cohortList, "class 3")
     // verify
     expect(result).toEqual(false)
   })
 })
 ```
 
-
-### Instructions
+## Instructions
 
 ```
 As a supermarket shopper,
@@ -76,12 +77,12 @@ Create a set of tests based on your domain model. The **user stories** and a pos
 - [ ] Create your tests and watch them fail by running `npx jasmine`
 - [ ] **Remember! Do not write source code yet!**
 
-### Further
+## Further
 
 - [ ] explain how the `#describe()` and `#it()` methods work
 - [ ] explain how Jasmine finds the test code to execute
 
-### Resources
+## Resources
 
 - [Jasmine Setup](https://jasmine.github.io/setup/nodejs.html)
 - [Creating a test-suite in Jasmine](https://jasmine.github.io/tutorials/your_first_suite)
