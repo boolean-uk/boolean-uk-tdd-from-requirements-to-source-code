@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 // TEST CODE
 // spec/cohortSearch.spec.js
-const cohortSearch = require('../src/cohortSearch.js')
+const { cohortSearch } = require('../src/cohortSearch.js')
 
 describe('Cohort Search', () => {
   it('returns cohort name if found', () => {
