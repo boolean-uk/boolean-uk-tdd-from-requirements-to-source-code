@@ -1,6 +1,7 @@
+/* eslint-disable no-undef */
 // TEST CODE
 const { cohortSearch } = require('../src/cohortSearch.js')
 
-describe("Cohort Search", () => {
+describe('Cohort Search', () => {
   // to be implemented
 })
